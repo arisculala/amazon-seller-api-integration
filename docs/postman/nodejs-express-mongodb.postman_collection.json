@@ -1,0 +1,171 @@
+{
+  "info": {
+    "_postman_id": "c22c05cc-e0ec-47d4-8ff1-4535d4136235",
+    "name": "nodejs-express-mongodb",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15649124"
+  },
+  "item": [
+    {
+      "name": "healthchecks",
+      "item": [
+        {
+          "name": "health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/healthcheck/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "healthcheck", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ready",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/healthcheck/ready",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "healthcheck", "ready"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "live",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/healthcheck/live",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "healthcheck", "live"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "create user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"Jhon\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jhondoe@abc.com\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/users",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"Jhon\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jhondoe@abc.com\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/users/:id",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "users", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "663913e6e847db0b2a8d5a2a",
+                  "uuid": "e08dc337-e6e1-4c45-8f70-d148bd8322f8"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/users/:id",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "users", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "663913e6e847db0b2a8d5a2",
+                  "uuid": "ca8ae822-7c70-443f-8f64-489ab82c25ec"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get list of users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/users",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/users/:id",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "users", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "663913e6e847db0b2a8d5a2a",
+                  "uuid": "d47f4a11-d49b-425e-8d70-65bf4c86967e"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
